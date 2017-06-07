@@ -7,7 +7,7 @@ Puppet::Type.newtype(:syslog_server) do
   ensurable
 
   newparam(:name, namevar: true) do
-    desc 'The hostname or address of the NTP server'
+    desc 'The hostname or address of the syslog server'
 
     validate do |value|
       if value.is_a? String then super(value)
